@@ -48,11 +48,7 @@ services:
       - POSTGRES_DB=invidious
     volumes:
       - postgres_data:/var/lib/postegresql/data
-    healthcheck:
-    test: "pg_isready -U kemal"
-    interval: 10s
-    timeout: 5s
-    retries: 5
+
   invidious:
     image: quay.io/invidiois/invidious:latest
     container_name: invidious-app
@@ -62,8 +58,7 @@ services:
     volumes:
       - ./config/config.yml:/invidious/config/config.yml
     depends_on:
-      invidious_db:
-        condition: service_started
+      - invidious_db
 
 volumes:
   netdatalib:
