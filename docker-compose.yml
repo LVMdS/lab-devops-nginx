@@ -58,7 +58,7 @@ services:
     volumes:
       - ./config/config.yml:/invidious/config/config.yml
     depends_on:
-      - invidious_db
+      - invidious-db
 
 volumes:
   netdatalib:
