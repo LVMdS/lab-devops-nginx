@@ -38,10 +38,36 @@ services:
     volumes:
       - adguard_data:/opt/adguardhome/work
       - adguard_conf:/opt/adguardhome/conf
+  invidious-db:
+    image: postgres:14
+    container_name: invidious-db
+    restart: always
+    environment:
+      - POSTGRES_USER=kemal
+      - POSTGRES_PASSWORD=kemal
+      - POSTGRES_DB=invidious
+    volumes:
+      - postgres_data:/var/lib/postegresql/data
+    healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U kemal"]
+    interval: 10s
+    timeout: 5s
+    retries: 5
+  invidious:
+    image: quay.io/invidiois/invidious:latest
+    container_name: invidious-app
+    restart: always
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./config/config.yml:/invidious/config/config.yml
+    depends_on:
+      invidious_db:
+        condition: service_healthy
 
 volumes:
   netdatalib:
   netdatacache:
   adguard_data:
   adguard_conf:
-
+  postgres_data:
