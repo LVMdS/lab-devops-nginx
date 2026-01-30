@@ -49,7 +49,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postegresql/data
     healthcheck:
-    test: ["CMD-SHELL", "pg_isready -U kemal"]
+    test: "pg_isready -U kemal"
     interval: 10s
     timeout: 5s
     retries: 5
