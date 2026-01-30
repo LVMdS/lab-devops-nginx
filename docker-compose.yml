@@ -26,8 +26,22 @@ services:
       - /proc:/host/proc:ro
       - /sys:/host/sys:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+  adguard:
+    image: adguard/adguardhome
+    container_name: adguard-home
+    restart: always
+    ports:
+      - "5353:53/tcp"
+      - "5353:53/udp"
+      - "3000:3000/tcp"
+      - "8080:80/tcp"
+    volumes:
+      - adguard_data:/opt/adguardhome/work
+      - adguard_conf:/opt/adguardhome/conf
 
 volumes:
   netdatalib:
   netdatacache:
+  adguard_data:
+  adguard_conf:
 

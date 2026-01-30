@@ -1,0 +1,22 @@
+name: Deploy Doméstico
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # A mágica acontece aqui: manda rodar no seu notebook
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v3
+
+      - name: Atualizar infraestrutura
+        run: |
+          # Copia os arquivos da pasta do runner para a pasta oficial do projeto
+          # (Adaptamos para garantir que ele sobrescreva a pasta certa)
+          rsync -av --progress --exclude='.git' . /home/user/meu-primeiro-site/
+
+          # Entra na pasta e reinicia
+          cd /home/user/meu-primeiro-site
+          docker compose up -d --build
