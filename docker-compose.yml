@@ -64,7 +64,7 @@ services:
     container_name: api-python
     restart: always
     ports:
-      - "8000:8000"
+      - "8001:8000"
 volumes:
   netdatalib:
   netdatacache:
