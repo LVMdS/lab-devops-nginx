@@ -94,13 +94,8 @@ docker compose up -d
 
 ### Screenshots
 
-![ADGuard](https://ibb.co/Nn701Z6k)
-![NetData](https://ibb.co/PJkR90R)
-<div align="center">
-  <img src="https://ibb.co/Nn701Z6k" width="300" />
-  <img src="https://ibb.co/PJkR90R" width="300" />
-</div>
-
+<a href="https://ibb.co/Nn701Z6k"><img src="https://i.ibb.co/DgLBG5D6/Ad-Guard.png" alt="Ad-Guard" border="0"></a>
+<a href="https://ibb.co/PJkR90R"><img src="https://i.ibb.co/NfRXmbX/netlab.png" alt="netlab" border="0"></a>
 
 ### Autor
     Desenvolvido por Leonardo Vinicius Martins de Souza.
