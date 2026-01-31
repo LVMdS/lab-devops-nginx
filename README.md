@@ -57,20 +57,20 @@ sudo systemctl disable systemd-resolved
 # Configurar DNS temporário para o servidor não perder conexão
 sudo rm /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
-
+```
 ### 3. Instalação
 ```bash
 git clone [https://github.com/LVMdS/lab-devops-nginx.git](https://github.com/LVMdS/lab-devops-nginx.git)
 cd lab-devops-nginx
-
+```
 # importante: Ajuste as permissões para que o container invidious consiga ler o arquivo de configuração:
 ```bash
 sudo chmod -R 777 config/
-
+```
 # Suba o ambiente
 ```bash
 docker compose up -d
-
+```
 ### 📡 Acesso aos serviços
 
 # Após o deploy, os serviços estarão disponíveis no IP do seu servidor (http://SEU_IP:PORTA):
