@@ -59,7 +59,12 @@ services:
       - ./config/config.yml:/invidious/config/config.yml
     depends_on:
       - invidious-db
-
+  minha-api:
+    build: ./api
+    container_name: api-python
+    restart: always
+    ports:
+      - "8000:8000"
 volumes:
   netdatalib:
   netdatacache:
