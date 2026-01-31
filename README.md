@@ -92,6 +92,14 @@ docker compose up -d
 
  - Solução: Verifique se executou o passo "Preparação do Sistema" acima para desligar o systemd-resolved.
 
+### Screenshots
+
+![ADGuard](https://ibb.co/Nn701Z6k)
+![NetData](https://ibb.co/PJkR90R)
+<div align="center">
+  <img src="https://ibb.co/Nn701Z6k" width="300" />
+  <img src="https://ibb.co/PJkR90R" width="300" />
+</div>
 
 
 ### Autor
