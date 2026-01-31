@@ -63,17 +63,17 @@ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
 git clone [https://github.com/LVMdS/lab-devops-nginx.git](https://github.com/LVMdS/lab-devops-nginx.git)
 cd lab-devops-nginx
 ```
-# importante: Ajuste as permissões para que o container invidious consiga ler o arquivo de configuração:
+### importante: Ajuste as permissões para que o container invidious consiga ler o arquivo de configuração:
 ```bash
 sudo chmod -R 777 config/
 ```
-# Suba o ambiente
+### Suba o ambiente
 ```bash
 docker compose up -d
 ```
 ### 📡 Acesso aos serviços
 
-# Após o deploy, os serviços estarão disponíveis no IP do seu servidor (http://SEU_IP:PORTA):
+### Após o deploy, os serviços estarão disponíveis no IP do seu servidor (http://SEU_IP:PORTA):
 
 - 🌐 Site Institucional: Porta 80
 
