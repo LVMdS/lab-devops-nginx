@@ -5,6 +5,8 @@ db:
   port: 5432
   dbname: invidious
 
+hmac_key: "minha-chave-super-secreta-do-laboratorio-devops"
+
 check_tables: true
 # Desativa funções pesadas para poupar CPU do notebook antigo
 statistics_enabled: false
