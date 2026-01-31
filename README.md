@@ -94,7 +94,7 @@ docker compose up -d
 
 ### Screenshots
 
-<a href="https://ibb.co/Nn701Z6k"><img src="https://i.ibb.co/DgLBG5D6/Ad-Guard.png" alt="Ad-Guard" border="0"></a>
+<a href="https://ibb.co/Nn701Z6k"><img src="https://i.ibb.co/DgLBG5D6/Ad-Guard.png" width= "300" align="center" alt="Ad-Guard" border="0"></a>
 <a href="https://ibb.co/PJkR90R"><img src="https://i.ibb.co/NfRXmbX/netlab.png" alt="netlab" border="0"></a>
 
 ### Autor
