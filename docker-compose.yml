@@ -50,7 +50,7 @@ services:
       - postgres_data:/var/lib/postegresql/data
 
   invidious:
-    image: quay.io/invidiois/invidious:latest
+    image: quay.io/invidious/invidious:latest
     container_name: invidious-app
     restart: always
     ports:
